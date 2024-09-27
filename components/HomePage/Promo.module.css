@@ -1,0 +1,208 @@
+.promo {
+  margin: 3.125rem auto;
+  padding: 2.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo h1 {
+  margin: 0.8rem 0;
+}
+
+.text-block {
+  width: 50%;
+}
+
+.playBtn {
+  display: flex;
+  align-items: center;
+}
+
+.playBtn p {
+  margin-left: 0.5225rem;
+}
+
+.playBtn-img {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+
+.paragraph {
+  margin: 0.625rem 0;
+}
+
+.btns {
+  margin: 1.25rem 0;
+}
+.btns a {
+  margin: 0.625rem 0;
+  width: 10.625rem;
+  height: 3.125rem;
+  display: block;
+  transition: all 0.2s;
+}
+.btns a img {
+  width: inherit;
+  height: inherit;
+}
+
+.btns a:hover {
+  transform: scale(1.1);
+}
+
+.btns a:active {
+  transform: scale(1);
+}
+
+.img-block {
+  width: 50%;
+  position: relative;
+}
+
+.phone {
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+.card-front {
+  position: absolute;
+  bottom: 6.25rem;
+  left: -0.25rem;
+  z-index: 3;
+  animation: 3s card-animation-front alternate infinite ease-in-out;
+}
+
+.card-back {
+  position: absolute;
+  z-index: 1;
+  right: -0.25rem;
+  transform: rotate(35deg);
+  top: 0;
+  animation: 3s card-animation-back alternate infinite ease-in-out;
+}
+
+.card-back img,
+.card-front img {
+  width: inherit;
+  height: inherit;
+}
+
+@keyframes card-animation-front {
+  0% {
+    bottom: 6.25rem;
+  }
+
+  100% {
+    bottom: 14.6875rem;
+  }
+}
+
+@keyframes card-animation-back {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 6.25rem;
+  }
+}
+
+@media (max-width: 1281px) {
+  .phone {
+    height: 400px;
+  }
+  .card-front,
+  .card-back {
+    height: 200px;
+  }
+
+  @keyframes card-animation-front {
+    0% {
+      bottom: 6.25rem;
+    }
+
+    100% {
+      bottom: 12.1875rem;
+    }
+  }
+}
+
+@media (max-width: 961px) {
+  .btns a {
+    width: 160px;
+  }
+  .btns a:hover {
+    transform: scale(1);
+  }
+  
+  .btns a:active {
+    transform: scale(1.1);
+  }
+  .phone {
+    height: 300px;
+    width: 300px;
+  }
+  .card-front,
+  .card-back {
+    height: 160px;
+  }
+
+  @keyframes card-animation-front {
+    0% {
+      bottom: 4.25rem;
+    }
+
+    100% {
+      bottom: 10.1875rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .promo {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .text-block {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btns {
+    display: flex;
+  }
+  .btns a {
+    margin: 0.625rem;
+  }
+
+  .img-block {
+    width: 80%;
+  }
+}
+
+@media (max-width: 481px) {
+  .phone {
+    width: 100%;
+  }
+  .playBtn p {
+    font-size: 12px;
+  }
+  .btns {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-front,
+  .card-back {
+    height: 120px;
+  }
+  .card-back {
+    right: -0.625rem;
+  }
+}

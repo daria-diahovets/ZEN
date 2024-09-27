@@ -1,0 +1,148 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.25rem auto;
+  height: 5rem;
+}
+
+.header ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.header ul li {
+  margin: 0 0.725rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.header ul li:hover {
+  transform: scale(1.2);
+}
+
+.header ul li:active {
+  transform: scale(1);
+}
+
+#zenlogo {
+  margin-left: 0;
+  height: 50px;
+}
+#zenlogo img {
+  width: inherit;
+  height: inherit;
+}
+
+#mastercard {
+  height: 40px;
+}
+#mastercard img {
+  width: inherit;
+  height: inherit;
+}
+
+#mastercard:hover {
+  transform: scale(1);
+  cursor: default;
+}
+
+#links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+#theme-icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-left: 0.625rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#theme-icon:hover {
+  transform: scale(1.2);
+}
+
+#theme-icon:active {
+  transform: scale(1);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 15px;
+  margin-left: 0.725rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.hamburger:active {
+  transform: scale(1.2);
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--text-color);
+}
+
+@media (max-width: 961px) {
+  #theme-icon {
+    margin: 0 0.725rem;
+  }
+  #theme-icon:hover {
+    transform: none;
+  }
+  #theme-icon:active {
+    transform: scale(1.2);
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  .header ul li:hover {
+    transform: none;
+  }
+
+  .header ul li:active {
+    transform: scale(1.2);
+  }
+  #links {
+    display: none;
+  }
+}
+
+@media (max-width: 481px) {
+  .header {
+    padding: 30px;
+  }
+  .header ul li {
+    margin: 0 0.425rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  #zenlogo {
+    width: 40px;
+    height: 40px;
+  }
+  #mastercard {
+    height: 35px;
+  }
+  #theme-icon {
+    margin: 0 0.425rem;
+  }
+  .hamburger {
+    margin-left: 0.425rem;
+  }
+}

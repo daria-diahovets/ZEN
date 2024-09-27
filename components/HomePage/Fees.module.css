@@ -1,0 +1,181 @@
+.fees {
+  display: flex;
+  padding: 2.5rem;
+  margin: 3.125rem auto;
+  align-items: center;
+  min-height: 35rem;
+}
+.text-block {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-block p {
+  width: 80%;
+  margin-bottom: 1rem;
+}
+.img-block {
+  width: 50%;
+  position: relative;
+}
+
+.phone {
+  margin-left: 10px;
+}
+
+.card {
+  position: absolute;
+  left: 106px;
+  top: 51px;
+  animation: 3s card-animation alternate infinite ease-in-out;
+}
+
+@keyframes card-animation {
+  0% {
+    top: 51px;
+    transform: scale(1);
+  }
+  100% {
+    top: 11px;
+    transform: scale(1.3);
+  }
+}
+
+/* 
+width: 546.8px;
+height: 334.4;
+width={182} height={106.8}
+*/
+/* /1.3 */
+@media (max-width: 1281px) {
+  .phone {
+    margin-left: 0;
+    width: 420.6px;
+    height: 257.2px;
+  }
+  .card {
+    width: 140px;
+    height: 82.1px;
+    left: 75px;
+    top: 40px;
+  }
+  .text-block p {
+    width: 100%;
+  }
+  @keyframes card-animation {
+    0% {
+      top: 40px;
+      transform: scale(1);
+    }
+    100% {
+      top: 11px;
+      transform: scale(1.3);
+    }
+  }
+}
+
+@media (max-width: 1032px) {
+  .phone {
+    position: relative;
+    left: -20px;
+  }
+  .card {
+    left: 55px;
+  }
+}
+/* 
+width: 546.8px;
+height: 334.4;
+width: 182px;
+height: 106.8;
+*/
+/* /1.6 */
+@media (max-width: 961px) {
+  .fees {
+    min-height: 25rem;
+  }
+  .phone {
+    width: 341.75px;
+    height: 209px;
+  }
+  .card {
+    width: 113.75px;
+    height: 66.75px;
+    top: 33px;
+    left: 42px;
+  }
+  @keyframes card-animation {
+    0% {
+      top: 33px;
+      transform: scale(1);
+    }
+    100% {
+      top: 0px;
+      transform: scale(1.3);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .fees {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    gap: 80px;
+  }
+  .text-block p {
+    width: 80%;
+  }
+  .text-block {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .img-block {
+    width: 341.75px;
+  }
+  .phone {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .card {
+    left: 61px;
+  }
+}
+
+/* 
+width: 546.8px;
+height: 334.4;
+width: 182px;
+height: 106.8;
+*/
+/* /2 */
+
+@media (max-width: 381px) {
+  .img-block {
+    width: 273.4px;
+  }
+  .phone {
+    width: 273.4px;
+    height: 167.2px;
+  }
+  .card {
+    top: 26px;
+    left: 48px;
+    width: 91px;
+    height: 53.4px;
+  }
+  @keyframes card-animation {
+    0% {
+      top: 26px;
+      transform: scale(1);
+    }
+    100% {
+      top: -10px;
+      transform: scale(1.3);
+    }
+  }
+}
